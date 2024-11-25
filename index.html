@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Sekolah TK IT Al-Huda</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0aff58;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #008f3c;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #008f3c;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #008f3c;
+            font-weight: bold;
+        }
+        .carousel {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel-images img {
+            max-width: 100%;
+            display: block;
+            width: 100%;
+        }
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-button {
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Profil Sekolah TK IT Al-Huda</h1>
+    <p>Menyiapkan Generasi Unggul</p>
+</header>
+
+<div class="container">
+    <h2>Selamat Datang di Sekolah TK IT Al-Huda</h2>
+    <div class="carousel">
+        <div class="carousel-images" id="carouselImages">
+            <img src="logo.png" alt="Gambar 1" width="4000" height="300">
+            <img src="sekolah1.jpg" alt="Gambar 2">
+            <img src="guru1.jpg" alt="Gambar 3">
+        </div>
+        <div class="carousel-buttons">
+            <button class="carousel-button" onclick="prevImage()">&#10094;</button>
+            <button class="carousel-button" onclick="nextImage()">&#10095;</button>
+        </div>
+    <p>Sekolah TK IT Al-Huda berkomitmen untuk memberikan pendidikan berkualitas tinggi dan membentuk karakter siswa.</p>
+    
+    <div class="nav">
+        <a href="guru.html">Profil Guru</a>
+    </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 Sekolah TK IT Al-Huda. Semua Hak Dilindungi.</p>
+</footer>
+
+<script>
+    let currentIndex = 0;
+
+    function showImage(index) {
+        const images = document.getElementById('carouselImages');
+        const totalImages = images.children.length;
+        if (index >= totalImages) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = totalImages - 1;
+        } else {
+            currentIndex = index;
+        }
+        images.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+    }
+
+    function nextImage() {
+        showImage(currentIndex + 1);
+    }
+
+    function prevImage() {
+        showImage(currentIndex - 1);
+    }
+</script>
+
+</body>
+</html>

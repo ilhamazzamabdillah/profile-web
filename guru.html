@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Guru Sekolah TK IT AL-HUDA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0aff58;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #008f3c;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .guru {
+            background: #ffffff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex; /* Menggunakan flexbox untuk tata letak */
+            align-items: center; /* Menyelaraskan gambar dan teks secara vertikal */
+        }
+        .guru img {
+            width: 150px; /* Lebar gambar */
+            height: 200px; /* Tinggi gambar */
+            margin-right: 20px; /* Jarak antara gambar dan teks */
+            border-radius: 5px; /* Sudut gambar yang membulat */
+            cursor: pointer; /* Menunjukkan bahwa gambar dapat diklik */
+        }
+        .guru h2 {
+            margin-top: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #008f3c;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none; /* Tersembunyi secara default */
+            position: fixed; /* Tetap di tempat */
+            z-index: 1; /* Di atas konten lainnya */
+            left: 0;
+            top: 0;
+            width: 100%; /* Lebar penuh */
+            height: 100%; /* Tinggi penuh */
+            overflow: auto; /* Aktifkan scroll jika diperlukan */
+            background-color: rgb(0,0,0); /* Latar belakang hitam */
+            background-color: rgba(0,0,0,0.9); /* Latar belakang hitam dengan transparansi */
+        }
+        .modal-content {
+            margin: 15% auto; /* Margin atas dan bawah */
+            display: block;
+            width: 80%; /* Lebar modal */
+            max-width: 700px; /* Lebar maksimum */
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: #ffffff;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #008f3c; /* War na latar belakang tombol */
+            color: white; /* Warna teks tombol */
+            padding: 10px 20px; /* Padding atas-bawah dan kiri-kanan */
+            text-decoration: none; /* Menghilangkan garis bawah */
+            border-radius: 5px; /* Sudut membulat */
+            text-align: center; /* Teks di tengah */
+            margin: 20px 0; /* Margin atas dan bawah */
+        }
+
+        .back-button:hover {
+            background-color: #006f2c; /* Warna latar belakang saat hover */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Profil Guru Sekolah TK IT AL-HUDA</h1>
+</header>
+
+<div class="container">
+    <h2>Daftar Guru</h2>
+    <a href="index.html" class="back-button">Kembali ke Halaman Utama</a>
+</div>
+<div class="guru">
+    <img src="atik.jpg" alt="atik, S.Pd" onclick="openModal(this.src)">
+    <div>
+        <h2>1. ATIK ANTURIHANA, S.Pd</h2>
+        <p>Kelas TK B 1</p>
+        <p>Jabatan  : Guru Kelas</p>
+        <p>Alamat   : Kemudo, Prambanan, Klaten</p>
+    </div>
+</div>
+<div class="guru">
+    <img src="eka.jpg" alt="EKA SUPRAPTI S.Pd, M.Pd" onclick="openModal(this.src)">
+    <div>
+        <h2>2. EKA SUPRAPTI, S.Pd, M.Pd</h2>
+        <p>Kepala Sekolah</p>
+        <p>Jabatan  : Kepala Sekolah</p>
+        <p>Alamat   : Margorejo, Canan, Wedi, Klaten</p>
+    </div>
+</div>
+
+<div class="guru">
+    <img src="diyah.jpg" alt="DIYAH ARIS FATONAH S.Pd" onclick="openModal(this.src)">
+    <div>
+        <h2>3. DIYAH ARIS FATONAH, S.Pd</h2>
+        <p>Kelas TK B 4</p>
+        <p>Jabatan  : Guru Kelas</p>
+        <p>Alamat   : Margorejo, Canan, Wedi, Klaten</p>
+    </div>
+</div>
+
+<div class="guru">
+    <img src="sofi.jpg" alt="REINA SOFIANA, S.Pd" onclick="openModal(this.src)">
+    <div>
+        <h2>4. REINA SOFIANA, S.Pd</h2>
+        <p>Kelas TK A 2</p>
+        <p>Jabatan  : Guru Kelas dan Operator</p>
+        <p>Alamat   : Kebondalem Kidul, Prambanan, Klaten</p>
+    </div>
+</div>
+
+<div class="guru">
+    <img src="wiwin.jpg" alt="WIWIN WINDRIANI, S.Pd.AUD" onclick="openModal(this.src)">
+    <div>
+        <h2>5. WIWIN WINDRIANI, S.Pd.AUD</h2>
+        <p>Kelas TK B 3</p>
+        <p>Jabatan  : Guru Kelas</p>
+        <p>Alamat   : Kemudo, Prambanan, Klaten</p>
+    </div>
+</div>
+
+<div class="guru">
+    <img src="semi.jpg" alt="SEMI, S.Pd" onclick="openModal(this.src)">
+    <div>
+        <h2>6. SEMI, S.Pd</h2>
+        <p>Kelas TK B 2</p>
+        <p>Jabatan  : Guru Kelas</p>
+        <p>Alamat   : Kemudo, Prambanan, Klaten</p>
+    </div>
+</div>
+<div class="guru">
+    <img src="mardini.jpg" alt="mardini, S.Pd" onclick="openModal(this.src)">
+    <div>
+        <h2>7. MARDINI, S.Pd.AUD</h2>
+        <p>Kelas TK A 1</p>
+        <p>Jabatan  : Guru Kelas</p>
+        <p>Alamat   : Cucukan, Prambanan, Klaten</p>
+    </div>
+</div>
+<div class="guru">
+    <img src="hervi.jpg" alt="hervi, S.Pd" onclick="open Modal(this.src)">
+    <div>
+        <h2>8. HERVI NOVITA SARI, S.M</h2>
+        <p>Jabatan  : Ketenaga Kerjaan</p>
+        <p>Alamat   : Kemudo, Prambanan, Klaten</p>
+    </div>
+</div>
+</div>
+
+<!-- Modal untuk menampilkan gambar yang lebih besar -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+</div>
+
+<footer>
+    <p>&copy; 2023 Sekolah TK IT AL-HUDA. Semua Hak Dilindungi.</p>
+</footer>
+
+<script>
+    function openModal(src) {
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("img01");
+        img.src = src;
+        modal.style.display = "block";
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+</script>
+
+</body>
+</html>
